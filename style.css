@@ -36,6 +36,7 @@
    border-radius: 5px;
    color: #ffffff;
    background-color:#8D3DAF ;
+   transition: 0.4s;
 }
 
 .hero-main{
@@ -48,7 +49,7 @@
 .hero{
    text-align: center;
    width: 600px;
-   padding-left: 580px;
+   padding-left: 520px;
 }
 .hero-heading{
     padding-top: 140px;
@@ -69,4 +70,10 @@
   background-color: #8D3DAF;
   border: none;
   border-radius: 6px;
+  transition: 0.3s;
+}
+button:hover{
+    transform: scale(1.1);
+    background-color: transparent;
+    cursor: pointer;
 }
