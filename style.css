@@ -7,32 +7,45 @@
     font-family: 'Montserrat', sans-serif;
 }
 .navbar{
+    padding: 20px 0px;
     display: flex;
     align-items: center;
-    height: 15vh;
+    justify-content: space-around;
+    height: auto;
     width: 100%;
     background-color: #0D0D0D ;
+    flex-wrap: wrap;
+}
+.three-line{
+    color: #ffffff;
+    font-size: 40px;
+    position: absolute;
+    right: 5%;
+    display: none;
+}
+#check{
+    display: none;
 }
 .navbar div img{
     width: 130px;
     height: 40px;
-    margin-left: 80px;
-    margin-top: 30px;
-    margin-bottom: 25px;
+    margin: 30px 10px 25px 0px;
 }
 .list{
     display: flex;
-    margin-left: 130px;
+    
 }
 .list-item{
+    padding: 0px 15px;
+    font-size: 25px;
+    font-weight: normal;
    margin: 0px 20px;
    color: #ffffff;
    font-weight: bolder;
 }
 .button-small{
-   margin-left: 500px;
-   height: 30px;
-   width: 120px;
+   height: 35px;
+   width: 140px;
    border-radius: 5px;
    color: #ffffff;
    background-color:#8D3DAF ;
@@ -41,39 +54,89 @@
 
 .hero-main{
     width: 100%;
-    height: 85vh;
+    height: 86vh;
     background: url(./assets/bg.png);
     background-size: cover;
     background-position: center;
 }
 .hero{
-   text-align: center;
-   width: 600px;
-   padding-left: 520px;
+    margin: 0px auto;
+    
+    height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .hero-heading{
-    padding-top: 140px;
+      margin: 0px auto;
     color: #fff;
-    font-size: 50px;  
+    font-size: 70px; 
+    text-align: center; 
 }
 .hero-description{
-   
-    margin-left: -80px;
+   font-size: 30px;
     color: #fff;
+    margin: 30px auto;
+    text-align: center;
 }
 .button-large{
-    margin-top: 30px;
-    height: 33px;
-    width: 190px;
+   
+    height: 37px;
+    width: 220px;
     font-size: 15px;
     color: #ffffff;
   background-color: #8D3DAF;
   border: none;
   border-radius: 6px;
   transition: 0.3s;
+  
 }
 button:hover{
     transform: scale(1.1);
     background-color: transparent;
     cursor: pointer;
+}
+
+@media screen and (max-width:1060px){
+    /* .navbar{
+        background-color: #8D3DAF;
+    } */
+    .list{
+        position: fixed;
+        top: 130px;
+        left:-100%;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        background-color: #8D3DAF;
+        transition: 0.6s;
+    }
+    .list-item{
+        font-size: 35px;
+        margin: 10px auto 50px;
+    }
+    .list-item:hover{
+        color: #000000;
+    }
+    .three-line{
+        display: inline;
+    }
+    #check:checked ~ .grow-list .list{
+        left: 0%;
+    }
+    .hero-heading{
+        text-align: center;
+    }
+    .button-small{
+        width: 200px;
+        height: 40px;
+        margin-left: -300px;
+        font-size: 20px;
+    }
+    .button-small:hover{
+        background-color: #000000;
+    }
+
+    
 }
