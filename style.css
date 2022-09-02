@@ -1,142 +1,213 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
-*{
+
+* {
     padding: 0px;
     margin: 0px;
     list-style: none;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
 }
-.navbar{
-    padding: 20px 0px;
+
+.navbar {
+    padding: 10px 0px;
     display: flex;
     align-items: center;
     justify-content: space-around;
     height: auto;
     width: 100%;
-    background-color: #0D0D0D ;
+    background-color: #1c2535;
     flex-wrap: wrap;
+    position: fixed;
+    top: 0;
 }
-.three-line{
+
+.three-line {
     color: #ffffff;
     font-size: 40px;
     position: absolute;
-    right: 5%;
+    right: 2%;
     display: none;
 }
-#check{
+
+#check {
     display: none;
 }
-.navbar div img{
+
+.navbar div img {
     width: 130px;
     height: 40px;
     margin: 30px 10px 25px 0px;
 }
-.list{
+
+.list {
     display: flex;
-    
+
 }
-.list-item{
+
+.list-item {
     padding: 0px 15px;
     font-size: 25px;
     font-weight: normal;
-   margin: 0px 20px;
-   color: #ffffff;
-   font-weight: bolder;
-}
-.button-small{
-   height: 35px;
-   width: 140px;
-   border-radius: 5px;
-   color: #ffffff;
-   background-color:#8D3DAF ;
-   transition: 0.4s;
+    margin: 0px 20px;
+    color: #ffffff;
+    font-weight: bolder;
 }
 
-.hero-main{
+.button-small {
+    height: 35px;
+    width: 140px;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: #8D3DAF;
+    transition: 0.4s;
+    border: none;
+}
+
+.hero-main {
     width: 100%;
-    height: 86vh;
+    height: 100vh;
     background: url(./assets/bg.png);
     background-size: cover;
     background-position: center;
 }
-.hero{
-    margin: 0px auto;
-    
+
+.hero {
     height: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
-.hero-heading{
-      margin: 0px auto;
+
+.hero-heading {
+    margin: 0px auto;
     color: #fff;
-    font-size: 70px; 
-    text-align: center; 
+    font-size: 70px;
+    text-align: center;
 }
-.hero-description{
-   font-size: 30px;
+
+.hero-description {
+    font-size: 30px;
     color: #fff;
     margin: 30px auto;
     text-align: center;
 }
-.button-large{
-   
+
+.button-large {
     height: 37px;
     width: 220px;
     font-size: 15px;
     color: #ffffff;
-  background-color: #8D3DAF;
-  border: none;
-  border-radius: 6px;
-  transition: 0.3s;
-  
+    background-color: #8D3DAF;
+    border: none;
+    border-radius: 6px;
 }
-button:hover{
+
+button:hover {
     transform: scale(1.1);
     background-color: transparent;
     cursor: pointer;
+    transition: 0.6s;
+    background-color: #8D3DAF;
+
 }
 
-@media screen and (max-width:1060px){
+@media screen and (max-width:1400px) {
+    .hero-heading {
+        margin-top: 200px;
+    }
+}
+
+@media screen and (max-width:1060px) {
+
     /* .navbar{
         background-color: #8D3DAF;
     } */
-    .list{
+    .list {
         position: fixed;
-        top: 130px;
-        left:-100%;
+        top: 110px;
+        left: -100%;
         flex-direction: column;
         width: 100%;
         height: 100%;
-        background-color: #8D3DAF;
+        background-color: #1c2535;
         transition: 0.6s;
     }
-    .list-item{
+
+    .list-item {
         font-size: 35px;
         margin: 10px auto 50px;
     }
-    .list-item:hover{
+
+    .list-item:hover {
         color: #000000;
     }
-    .three-line{
+
+    .three-line {
         display: inline;
     }
-    #check:checked ~ .grow-list .list{
+
+    #check:checked~.grow-list .list {
         left: 0%;
     }
-    .hero-heading{
+
+    .hero-heading {
         text-align: center;
     }
-    .button-small{
-        width: 200px;
+
+    .button-small {
+        width: 180px;
         height: 40px;
-        margin-left: -300px;
         font-size: 20px;
-    }
-    .button-small:hover{
-        background-color: #000000;
+        position: absolute;
+        left: 40%;
+        top: 35%;
     }
 
-    
+    .navbar {
+        justify-content: space-between;
+    }
+
+
+
+}
+
+@media screen and (max-width:690px) {
+    .button-large {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width:630px) {
+    .button-large {
+        padding: 10px;
+    }
+
+    .hero-heading {
+        margin-top: 200px;
+        font-size: 60px;
+
+    }
+}
+
+@media screen and (max-width:450px) {
+    .button-small {
+        display: none;
+    }
+
+    .hero-heading {
+        margin-top: 200px;
+        font-size: 60px;
+    }
+}
+
+@media screen and (max-width:380px) {
+    .hero-heading {
+        font-size: 50px;
+    }
+
+    .hero-description {
+        font-size: 30px;
+    }
 }
